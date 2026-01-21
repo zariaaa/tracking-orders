@@ -1,0 +1,4 @@
+orderNo;tracking_number;courier;street;zip_code;city;destination_country_iso3;email;articleNo;articleImageUrl;quantity;product_name
+ORD-123-2016;00340000392100000001;DHL;Landstr. 10;20236;Berlin;DEU;test@example.com;A-B2-U;image1.jpg;5;Handy Bag
+ORD-123-2016;00340000392100000001;DHL;Landstr. 10;20236;Berlin;DEU;test@example.com;A-C1-L;image2.jpg;2;Poster
+660XX003;00331132177202443141;DHL;Johnstrasse. 7a;1140;Wien;AT;test@example.com;;;;

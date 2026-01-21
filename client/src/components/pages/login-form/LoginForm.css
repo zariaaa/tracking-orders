@@ -1,0 +1,53 @@
+.login-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#app .form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#app .form-input label {
+  margin: 0.5rem 0rem;
+}
+
+#app .form-input input {
+  border: 2px solid #04b882;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 15px 10px;
+  margin-top: 0.5rem;
+}
+
+#app .form-button input {
+  border: 2px solid #04b882;
+  padding: 15px 10px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#app .form-button button {
+  padding: 10px;
+  margin-top: 2rem;
+  border: 2px solid #04b882;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+}
+
+#app .error-message {
+  color: #ff6f6f;
+  font-size: 13px;
+  margin: 1rem 0rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-button {
+    display: flex;
+    justify-content: center;
+  }
+}

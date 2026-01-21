@@ -1,0 +1,123 @@
+.order-details-articles {
+  margin: 1rem 0rem;
+  padding: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.article-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* gap: 2.5rem; */
+}
+
+.article-image-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.field-label {
+  display: block;
+  font-size: 10px;
+  color: #04b882;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.quantity-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: middle;
+  justify-content: flex-start;
+}
+
+.quantity {
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #04b882;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.article-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+.article-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-title > span:last-child {
+  font-size: 15px;
+}
+
+.article-number > span:last-child {
+  font-size: 14px;
+  color: #999;
+}
+
+@media only screen and (max-width: 600px) {
+  .field-label {
+    font-size: 9px;
+  }
+
+  .quantity {
+    min-width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .image-wrapper img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .quantity {
+    font-size: 10px;
+    min-width: 20px;
+    height: 20px;
+  }
+
+  .article-title > span:last-child {
+    font-size: 13px;
+  }
+
+  .article-number > span:last-child {
+    font-size: 10px;
+  }
+
+  .field-label {
+    font-size: 8px;
+  }
+}

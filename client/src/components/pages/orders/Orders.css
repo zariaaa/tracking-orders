@@ -1,0 +1,50 @@
+.order-card-information {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.order-card {
+  background-color: #2b2d3a;
+  border: 2px solid #04b882;
+  border-radius: 15px;
+  box-shadow: rgba(4, 184, 130, 0.35) 0px 5px 15px;
+  margin: 2rem 0rem;
+  padding: 20px;
+}
+
+.order-card:hover {
+  background-color: #1e1f27;
+}
+
+.order-card.articles {
+  overflow-y: scroll;
+   height: 166px;
+}
+}
+
+.order-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-view {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .order-card {
+    padding: 10px;
+  }
+  .order-information {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .order-card-information {
+    padding: 0px;
+  }
+}
