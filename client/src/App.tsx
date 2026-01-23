@@ -13,7 +13,7 @@ function App() {
   const isToggleChecked = localStorage.getItem("isChecked")
 
   useEffect(() => {
-    fetch('/api/orders')
+    fetch(`${import.meta.env.VITE_API_URL}/api/orders`)
       .then(res => res.json())
       .then(data => setOrders(data))
       .catch(err => console.log(err));
