@@ -51,6 +51,7 @@ const Orders: FunctionComponent<Props> = ({data}): ReactElement =>{
                   {selectedOrder ? (
                   <motion.div
                       key="tracking-detail"
+                      className="trackings"
                       initial={pageTransition.initial}
                       animate={pageTransition.animate}
                       exit={pageTransition.exit}
@@ -61,6 +62,8 @@ const Orders: FunctionComponent<Props> = ({data}): ReactElement =>{
                   ) : (
                     <motion.div
                         key="orders-list"
+                        className="orders"
+                        style={{backgroundColor: "transparent", border: "none"}}
                         initial={pageTransition.initial}
                         animate={pageTransition.animate}
                         exit={pageTransition.exit}

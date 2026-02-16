@@ -3,49 +3,201 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 8px;
+}
+
+.login-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-hero .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a29bfe;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.login-hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-hero p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 380px;
+  margin: 0 auto;
 }
 
 #app .form-input {
   display: flex;
   flex-direction: column;
-}
-
-#app .form-input label {
-  margin: 0.5rem 0rem;
-}
-
-#app .form-input input {
-  border: 2px solid #04b882;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 15px;
-  padding: 15px 10px;
   margin-top: 0.5rem;
 }
 
-#app .form-button input {
-  border: 2px solid #04b882;
-  padding: 15px 10px;
-  margin-top: 2rem;
-  border-radius: 10px;
-  width: 100%;
-}
-
-#app .form-button button {
-  padding: 10px;
-  margin-top: 2rem;
-  border: 2px solid #04b882;
-  border-radius: 10px;
-  text-transform: uppercase;
-  padding: 15px 30px;
-}
-
-#app .error-message {
-  color: #ff6f6f;
+#app .form-input label {
+  margin: 0 0 8px 0;
   font-size: 13px;
-  margin: 1rem 0rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
 }
 
-@media only screen and (max-width: 600px) {
+#app .form-input input {
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  transition: all var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+#app .form-input input::placeholder {
+  color: var(--text-muted);
+}
+
+#app .form-input input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  background: rgba(108, 92, 231, 0.05);
+}
+
+#app .form-button input,
+#app .form-button button {
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+#app .form-button input:hover,
+#app .form-button button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+  filter: brightness(1.1);
+}
+
+#app .form-button input:active,
+#app .form-button button:active {
+  transform: translateY(0);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.login-footer p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.login-footer .test-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: 'Inter', monospace;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-container {
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+
+  .login-hero {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-hero .badge {
+    font-size: 11px;
+    padding: 5px 12px;
+    margin-bottom: 1rem;
+  }
+
+  .login-hero h1 {
+    font-size: 26px;
+  }
+
+  .login-hero p {
+    font-size: 14px;
+  }
+
+  .login-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  #app .form-input input {
+    padding: 16px;
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+
+  #app .form-button input,
+  #app .form-button button {
+    padding: 16px 24px;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .login-container {
+    padding-top: 6vh;
+  }
+
+  .login-hero h1 {
+    font-size: 22px;
+  }
+
+  .login-hero p {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
   .form-button {
     display: flex;
     justify-content: center;

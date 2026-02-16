@@ -60,6 +60,7 @@ const Tracking: FunctionComponent<Props> = ({ trackingInformation , handleCallba
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+            style={{ display: " flex", flexDirection: "column", gap: "2rem" }}
         >
             <motion.div
                 key={trackingInformation.id}

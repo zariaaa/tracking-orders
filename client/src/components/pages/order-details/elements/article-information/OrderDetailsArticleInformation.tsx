@@ -41,7 +41,7 @@ const OrderDetailsArticleInformation: FunctionComponent<Props> = ({articleNo, qu
             initial="hidden"
             animate="visible"
             custom={index}
-            whileHover={{ backgroundColor: "rgba(4, 184, 130, 0.1)", borderRadius: "15px" }}
+            whileHover={{ backgroundColor: "rgba(108, 92, 231, 0.08)", borderRadius: "12px" }}
         >
             <div className="article-details">
                 <motion.div

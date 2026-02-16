@@ -32,12 +32,6 @@ const OrderDetails: FunctionComponent<Props> = ({ order, onOrderClick }): ReactE
       return (
         <motion.div
             variants={itemVariants}
-            whileHover={{
-                scale: 1.02,
-                boxShadow: "0 8px 30px rgba(4, 184, 130, 0.3)",
-                transition: { duration: 0.2 }
-            }}
-            whileTap={{ scale: 0.98 }}
         >
             <div onClick={handleClick} className="order-card">
                 <div key={order.id}>

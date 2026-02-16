@@ -9,20 +9,11 @@ export type Props = {
 } 
 
 const RoutesMode: FunctionComponent<Props> = ({data}): ReactElement => {
-    let boxVariants = {};
-    const isMobile = window.innerWidth < 1025; //Add the width you want to check for here (now 768px)
-    if (!isMobile) {
-      boxVariants = {
-        hover: {
-          scale: 0.7,
-        //   rotate: 10
-        }
-      };
-    }
-    return ( 
+    return (
         <motion.div
-            variants={boxVariants}
-            // initial={ !isMobile ? { rotate: 180 } : { rotate: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
             <div className="form">
                 <div className="form-content">

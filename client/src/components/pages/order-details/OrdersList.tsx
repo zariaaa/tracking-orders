@@ -26,6 +26,7 @@ const OrdersList: FunctionComponent<Props> = ({ orders, onOrderClick}): ReactEle
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+             style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
         >
             {orders.map((order, index) => (
                 <OrderDetails key={order.id} order={order} onOrderClick={onOrderClick} index={index} />

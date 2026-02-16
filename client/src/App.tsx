@@ -41,17 +41,17 @@ function App() {
 
   return (
     <div id="app" className={`${currentTheme}`}>
-      <div className='container'>
-        <div className='btn-theme'>
-          <div className='toggle-switch'>
-              <input 
-                type="checkbox" 
-                onChange={toggleTheme}
-                checked={isToggleChecked === "true" ? true : false}
-                id="darkmode-toggle"/>
-              <label htmlFor="darkmode-toggle"/>
-          </div>
+      <div className='btn-theme'>
+        <div className='toggle-switch'>
+            <input
+              type="checkbox"
+              onChange={toggleTheme}
+              checked={isToggleChecked === "true" ? true : false}
+              id="darkmode-toggle"/>
+            <label htmlFor="darkmode-toggle"/>
         </div>
+      </div>
+      <div className='container'>
         <BrowserRouter>
             <RoutesMode data={orders}/>
         </BrowserRouter>

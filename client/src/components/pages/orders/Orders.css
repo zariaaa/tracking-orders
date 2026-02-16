@@ -1,26 +1,52 @@
 .order-card-information {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 4px 0;
 }
 
 .order-card {
-  background-color: #2b2d3a;
-  border: 2px solid #04b882;
-  border-radius: 15px;
-  box-shadow: rgba(4, 184, 130, 0.35) 0px 5px 15px;
-  margin: 2rem 0rem;
-  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  /* margin: 12px 0; */
+  padding: 24px;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(108, 92, 231, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
 }
 
 .order-card:hover {
-  background-color: #1e1f27;
+  border-color: var(--border-glass-hover);
+  box-shadow: rgba(108, 92, 231, 0.1) 0px 5px 15px;
+  transform: translateY(-1px);
+}
+
+.order-card:hover::before {
+  opacity: 1;
 }
 
 .order-card.articles {
-  overflow-y: scroll;
-   height: 166px;
-}
+  overflow-y: auto;
+  max-height: 240px;
+  cursor: default;
 }
 
 .order-cards {
@@ -35,16 +61,60 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 600px) {
+/* Arrow indicator for clickable cards */
+.order-card::after {
+  content: '\2192';
+  position: absolute;
+  right: 24px;
+  top: 67%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.order-card:hover::after {
+  color: var(--accent);
+  transform: translateY(-50%) translateX(4px);
+}
+
+.order-card.articles::after {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   .order-card {
-    padding: 10px;
+    padding: 20px 16px;
+    /* margin: 8px 0; */
+    -webkit-tap-highlight-color: transparent;
+    padding-right: 44px; /* room for the arrow */
   }
+
+  .order-card::after {
+    right: 45px;
+    font-size: 16px;
+    top: 75%;
+  }
+
+  .order-card.articles {
+    padding-right: 16px;
+    max-height: 200px;
+  }
+
   .order-information {
-    flex-direction: column;
-    padding: 0px;
+    gap: 4px;
+    padding: 0;
   }
 
   .order-card-information {
-    padding: 0px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .order-card {
+    padding: 16px 14px;
+    padding-right: 40px;
+    border-radius: var(--radius-sm);
   }
 }
